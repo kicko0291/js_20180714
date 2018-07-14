@@ -1,0 +1,64 @@
+<html>
+    <head>
+            <style>
+                img{
+                    width:300px
+                }
+                div{
+                    text-align:center;
+                    padding-top:40px
+                }
+                h1{
+                    font-size: 20;
+                    color: black;
+                }
+                button{
+                    background-color: transparent;
+                    color:rgb(250, 149, 182);
+                    border:1px solid rgb(250, 149, 182);
+                    padding:5px 40px;
+                    font-size: 1em
+                }
+                button:hover{
+                    background-color: rgb(250, 149, 182);
+                    color:white;
+                    border:1px solid transparent;
+                    padding:5px 40px;
+                    font-size: 1em
+                }
+                body{
+                    background-image: url("https://png.pngtree.com/thumb_back/fw800/back_pic/04/42/57/99585216074562e.jpg");
+                    background-size:cover
+
+
+                }
+            </style>
+    </head>
+    <body>
+        <div>
+        <img src="http://pic.pimg.tw/jack0911944232/1322183578-2525246028_l.jpg">
+        <h1>你是不是我心中最軟的一塊？</h1>
+        輸入你的名字：<input id="name"></input>
+        <br>
+        <br>
+        <button onclick="soft()">免費測驗</button>
+        <p id="result" style="color:rgb(250, 149, 182) "></p>
+        </div>
+        
+    </body>
+    <script>
+        function soft(){
+            let name = document.getElementById('name').value
+            if(name==''){
+                document.getElementById('result').innerHTML='請輸入姓名喔！'
+            }else{
+            let randomNum = Math.random()
+            if(randomNum<0.3){
+                document.getElementById('result').innerHTML=name+'很可惜你不是我最軟一塊～'
+            }else{
+                document.getElementById('result').innerHTML=name+'好棒棒，你是最軟的！'
+            }
+        }
+    }
+    </script>
+</html>
